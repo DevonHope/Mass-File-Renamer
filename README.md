@@ -28,9 +28,11 @@ NOTE:
 ## Use
 
   ### Auto Mode
-  Auto Mode takes a path to a folder with files to be renamed. The folder can contain other folders, only filenames will be renamed. <br />
-  Auto Mode looks for four files with similar starting and ending character sequences (strings) in each folder and removes those character <br /> 
-  sequences from each filename in that specific folder.
+  Auto Mode takes a path to a folder with files to be renamed. The folder can contain other folders, only filenames will be renamed. Auto Mode looks for four files with similar starting and ending character sequences (strings) in each folder and removes those character sequences from each filename in that specific folder.
+
+  NOTE:
+  
+  This is in v1.0, automode may incorrectly rename files, all old file names and new file names will be logged in the log file under the `log_rename` folder that is created when files are renamed. If you are worried about renaming too many files incorrectly, you can always edit the script to stop it from autorenaming and just output the new file names to the log file in order to check the validity before renaming the files. To do this comment out line 413 so that `os.rename(f_path+f,f_path+new_f)` is `#os.rename(f_path+f,f_path+new_f)`, this way files will not be renamed, but their new file names will be stored in the log file. 
 
   EXAMPLE:  
   
@@ -48,9 +50,7 @@ NOTE:
     - E03 - NAME03.mkv  
   
   ### Standard Mode
-  Standard mode requires the input of several key variables such as the path to the folder with the files to be renamed,  
-  the extension of the files to be renamed, specifically video files for now, the beginning string to get rid of,  
-  and the end string to get rid of.
+  Standard mode requires the input of several key variables such as the path to the folder with the files to be renamed, the extension of the files to be renamed, specifically video files for now, the beginning string to get rid of, and the end string to get rid of.
   
   EXAMPLE:  
   
