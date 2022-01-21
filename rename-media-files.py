@@ -395,8 +395,7 @@ def autoRename(a, folders):
                         print('\ta['+str(c)+']'+str(i))
                     '''
 
-                    #if proceed():
-                        #rename
+                    #rename
                     for f in files:
                         #print('\nold file: ' + f)
                         if (a[1] in f):
@@ -409,7 +408,8 @@ def autoRename(a, folders):
                             new_f = new_f+a[1]
                             #print('new file: ' + new_f+'\n')
                             f_path = root+a[4]
-                            #if not dev_mode:
+                            # comment out the line below to double check
+                            # the renamed files before renaming them
                             os.rename(f_path+f,f_path+new_f)
                             fo.write('\nFile: '+f+'\nRenamed: '+new_f+'\n\n')
                             c+=1
