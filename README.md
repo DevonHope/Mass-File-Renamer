@@ -7,6 +7,8 @@ The tool is focused on removing a beginning section of the name and an ending se
 from the beginning of the string to the end of the section. It will ask for these values below, as well as a path to the folder containing 
 the files, a file extension, and beginning text identifier that is commonly found at the beginning of each name.
 
+For security and debugging purposes, all files that are renamed are stored in a log file in a folder titled `log_rename` with the log files names `log_rename_DATE_TIME.txt`. The log file stores the old and new file name for each file that is renamed, in case the automode renames files incorrectly.
+
 ## Requirments
 
   - python3
@@ -17,7 +19,8 @@ the files, a file extension, and beginning text identifier that is commonly foun
 
 ## Run
 
-NOTE: You only need to download the `rename-media-files.py` file, `find-ext.py` is used to specifically find the extensions of all files in the specified folder, but is not used by `rename-media-files.py`.
+NOTE: 
+  - You only need to download the `rename-media-files.py` file, `find-ext.py` is used to specifically find the extensions of all files in the specified folder, but is not used by `rename-media-files.py`.
 
 `python3 rename-media-files.py`
 
