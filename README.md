@@ -17,6 +17,8 @@ the files, a file extension, and beginning text identifier that is commonly foun
 
 ## Run
 
+NOTE: You only need to download the `rename-media-files.py` file, `find-ext.py` is used to specifically find the extensions of all files in the specified folder, but is not used by `rename-media-files.py`.
+
 `python3 rename-media-files.py`
 
 
